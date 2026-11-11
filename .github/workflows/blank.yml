@@ -1,0 +1,17 @@
+
+name: Build Android APK
+on:
+push:
+branches: [ "main" ]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+- name: Set up JDK 17
+uses: actions/setup-java@v4
+with:
+java-version: '17'
+distribution: 'temurin'
+- name: Build with Gradle
+run: ./gradlew assembleDebug}يا غالي، عشان تاخد الكود، اضغط مطولاً على المربع اللي قدامك، واختار "لصق" عشان ينزل الكود اللي نسخته. بعدين اضغط على زر "حفظ التغييرات" الأخضر فوق عشان يبدأ الموقع يبني لك ملف الـ APK.
